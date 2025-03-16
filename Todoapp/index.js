@@ -2,14 +2,26 @@ document.getElementById("btn").addEventListener("click", btnclick);
 
 let data = JSON.parse(localStorage.getItem("data")) || [];
 function btnclick() {
+ 
   let inputvalue = document.getElementById("inputbox").value;
-  data.push(inputvalue);
-  localStorage.setItem("data", JSON.stringify(data));
-  showoutput()
+  if(inputvalue!=""){
+    data.push(inputvalue);
+    localStorage.setItem("data", JSON.stringify(data));
+    
+    showoutput()
+    document.getElementById("inputbox").value = ""
+  }else{
+   document.getElementById("gaur").innerText="Enter Todo"
+
+  }
+  
 }
 function showoutput(){
-  document.getElementById("output").innerText=""
+  document.getElementById("values").innerText=""
   data.map((values)=>{
+    let big1 = document.createElement("div")
+    big1.setAttribute("id","big1")
+  
     let h1= document.createElement("h1")
     h1.innerText = values
     let btndelete = document.createElement("button")
@@ -17,7 +29,11 @@ function showoutput(){
       valuesdelete(values)    
     })
     btndelete.innerText= "Done"
-    document.getElementById("output").append(h1,btndelete)
+    btndelete.setAttribute("id","deletebtn")
+    big1.append(h1,btndelete)
+    
+  
+    document.getElementById("values").append(big1)
   })
 }
 

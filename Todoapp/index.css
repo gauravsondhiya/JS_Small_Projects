@@ -1,13 +1,19 @@
 #mainbody {
-  
-  /* border:solid 2px black; */
-  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* border:solid 2px red; */
 }
 body {
-  background-color: color-mix(in srgb, red 5%, rgb(0, 255, 21) 25%);
+  background-color: color-mix(in srgb, rgb(223, 147, 147) 30%, rgb(91, 176, 241) 25%);
 }
 #inputboxes {
-  margin: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  /* height: 300px; */
+  /* border:solid 2px black; */
 }
 #inputbox,
 #btn {
@@ -15,15 +21,46 @@ body {
   width: 350px;
   border-radius: 25px;
   text-align: center;
-  border-color: red;
+  /* border-color: red; */
   font-size: larger;
+ 
 }
 #btn {
   height: 50px;
-  width: 150px;
+  width: 100px;
   border-radius: 25px;
   text-align: center;
-  border-color: red;
+  /* border-color: red; */
   font-size: larger;
   font-weight: 600;
+  margin-left: 5px;
 }
+
+#output{
+  display: flex;
+  flex-direction: column;
+}
+#values{
+  display: flex;
+  flex-direction: column;
+  margin:auto;
+}
+
+#big1{
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+  /* border:solid 1px red; */
+  text-wrap: balance;
+}
+ h1{
+  width: 80%;
+  /* border:solid 1px red; */
+  text-wrap: balance;
+ }
+ #deletebtn{
+  width: 20%;
+  height: 50px;
+  margin: auto;
+  border-radius: 15px;
+ }
