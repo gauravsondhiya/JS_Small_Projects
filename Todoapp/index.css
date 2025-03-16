@@ -1,0 +1,29 @@
+#mainbody {
+  
+  /* border:solid 2px black; */
+  height: 500px;
+}
+body {
+  background-color: color-mix(in srgb, red 5%, rgb(0, 255, 21) 25%);
+}
+#inputboxes {
+  margin: 70px;
+}
+#inputbox,
+#btn {
+  height: 50px;
+  width: 350px;
+  border-radius: 25px;
+  text-align: center;
+  border-color: red;
+  font-size: larger;
+}
+#btn {
+  height: 50px;
+  width: 150px;
+  border-radius: 25px;
+  text-align: center;
+  border-color: red;
+  font-size: larger;
+  font-weight: 600;
+}
